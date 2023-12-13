@@ -1,0 +1,36 @@
+.header_drawer {
+  
+  height: 100%;
+
+ .logo{
+display: flex;
+// border: 1px solid red;
+align-items: center;
+gap: 10px;
+
+  >div{
+    height: 40px;
+
+  }
+ }
+
+  a {
+    text-decoration: none;
+    color: black;
+
+    &.active{
+        p{
+            color: $color_primary;
+            font-weight: 600;
+        }
+
+    }
+    &:hover {
+      p {
+        color: $color_primary;
+        
+        
+      }
+    }
+  }
+}

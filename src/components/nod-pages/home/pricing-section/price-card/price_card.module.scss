@@ -1,0 +1,153 @@
+.price_card {
+  background-color: $color_lightest;
+  margin: 30px auto;
+  border-radius: 5px;
+  padding-bottom: 20px;
+  box-shadow: 3px 3px 0px 4px $color_light;
+  cursor: pointer;
+  width: 85%;
+
+  @include respond-above(lg) {
+    margin: 5px;
+  }
+
+  &:hover {
+    background-color: $color_light;
+    box-shadow: 3px 3px 0px 4px $color_lightest;
+    .recommended {
+      background-color: transparent;
+      &:has(p) {
+        background-color: $color_lightest;
+      }
+    }
+  }
+
+  &.card_recommended {
+    @include respond-above(lg) {
+      transform: scale(1.1);
+    }
+  }
+
+  .recommended {
+    background-color: transparent;
+    &:has(p) {
+      background-color: $color_light;
+    }
+    border-radius: 5px 5px 0px 0px;
+    @include flecCenter;
+    color: $color_lightest;
+    height: 40px;
+    font-weight: 600;
+    p {
+      margin: 8px;
+    }
+  }
+
+  .details {
+    padding: 10px;
+    @include flecCenter;
+    flex-direction: column;
+    text-align: center;
+
+    h1 {
+      font-size: 30px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+    small {
+      text-decoration: line-through;
+    }
+
+    .benifits {
+      .benifit {
+        margin: 16px 0px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px dashed black;
+      }
+    }
+  }
+
+  position: relative;
+  // animation: flipCard 1s ease-in-out;
+
+  &:has(.info) {
+    animation: flipCard 1s ease-in-out;
+
+    .btn {
+      svg {
+        path {
+          color: $color_lightest;
+        }
+
+        &:hover {
+          transform: scale(1.2);
+
+          path {
+            color: $color_light;
+          }
+        }
+      }
+    }
+  }
+
+  .btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    z-index: 20;
+
+    svg {
+      &:hover {
+        transform: scale(1.2);
+
+        path {
+          color: $color_dark;
+        }
+      }
+      path {
+        color: $color_darkest;
+      }
+    }
+  }
+
+  .info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    background-color: $color_dark;
+    color: $color_lightest;
+    div {
+      padding: 60px 40px;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    * {
+      color: $color_lightest;
+    }
+  }
+}
+
+@keyframes flipCard {
+  0% {
+    background-color: $color_lightest;
+    transform: rotateY(0deg);
+    opacity: 0;
+  }
+
+  100% {
+    transform: rotateY(360deg);
+    background-color: $color_dark;
+    opacity: 1;
+  }
+}

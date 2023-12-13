@@ -1,0 +1,38 @@
+.contact_popup {
+  // max-width: 90%;
+  // margin: auto;
+  .register_box {
+    opacity: 99.9%;
+    background-color: white;
+    * {
+      margin: 0;
+    }
+    border-radius: 10px;
+
+    .top {
+      border-radius: 10px 10px 0px 0;
+      background-color: $color_primary;
+      text-align: center;
+      padding: 20px;
+      h1 {
+        font-weight: 600;
+        //   font-size: 40px;
+        color: white;
+      }
+    }
+
+    .bottom {
+      @include flecCenter;
+
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px 30px;
+
+      input,
+      select {
+        width: 100%;
+        padding: 4px 10px;
+      }
+    }
+  }
+}

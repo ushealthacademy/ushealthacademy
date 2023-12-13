@@ -1,0 +1,132 @@
+.about {
+  background-color: $color_lightest;
+  @include flecCenter;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 40px;
+  width: 100%;
+  margin-bottom: 30px;
+  border-radius: 10px;
+
+  
+  @include respond-above(lg) {
+    margin-bottom: 0px;
+    height: 100%;
+  }
+  p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .brand {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: fit-content;
+      * {
+        font-weight: 600;
+        margin: 0;
+      }
+      > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        gap: 20px;
+
+        hr {
+          opacity: 1;
+
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+
+    hr{
+        // opacity: 1;
+        margin: 0;
+        width: 70%;
+    }
+
+
+    @include respond-above(lg) {
+      flex-direction: row;
+      justify-content: space-between;
+
+      
+    hr{
+        transform: rotate(90deg);
+        // height: 100px;
+        width: 50%;
+    }
+    }
+  }
+
+  .contact_details {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    color: $color_darkest;
+    gap: 10px;
+
+    a {
+      color: $color_darkest;
+      p{
+        font-size: 14px;
+      }
+    }
+    > div {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+
+  .social_media {
+    text-align: center;
+    p {
+        font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    width: 100%;
+    .head {
+      // background-color: red;
+      width: 100%;
+      * {
+        margin: 0;
+      }
+      margin-bottom: 10px;
+    }
+
+    .links {
+      @include flecCenter;
+      gap: 20px;
+
+      svg {
+        color: $color_darkest;
+        &:hover {
+          transform: scale(1.5);
+        }
+      }
+    }
+  }
+}

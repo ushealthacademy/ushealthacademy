@@ -1,0 +1,24 @@
+.contact{
+    background-color: $color_lightest;
+    @include flecCenter;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px;
+    border-radius: 10px;
+    width: 100%;
+//   margin-bottom: 30px;
+
+    p{
+        margin: 0;
+        font-size: 14px;
+    }
+
+    input,textArea{
+        border: none !important;
+        outline: none !important;
+        box-shadow: 1px 1px 0px 1px $color_light;
+        padding: 10px 20px;
+        border-radius: 5px;
+        width: 100%;
+    }
+}

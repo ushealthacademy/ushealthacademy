@@ -1,0 +1,28 @@
+.nod_button {
+  border: none;
+  outline: none;
+  height: fit-content;
+  padding: 8px 16px;
+  background-color: $color_lightest;
+  border-radius: 5px;
+  box-shadow: 1px 1px 0px 2px $color_light;
+  border: 1px solid $color_darkest;
+
+  a {
+    text-decoration: none;
+    color: $color_darkest !important;
+   
+  }
+
+  &:hover {
+    transform: translate(-5px, 0px);
+    box-shadow: 2px 2px 0px 2px $color_lightest;
+    background-color: $color_idle;
+    color: $color_lightest;
+    font-weight: 600;
+
+    a {
+      color: $color_lightest;
+    }
+  }
+}

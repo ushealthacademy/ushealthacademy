@@ -1,0 +1,30 @@
+.courses_section{
+    
+    .courses{
+        h5{
+            text-align: center;
+            font-size: 16px;
+            margin: 0;
+        }
+    }
+
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+
+        img{
+            width: 100%;
+            height: auto;
+        }
+        
+        @include respond-below(sm){
+            grid-template-columns: 100%;
+            // background-color: red;
+        }
+        
+        @include respond_above(lg){
+            grid-template-columns: repeat(5, 20%);
+
+        }
+    }
+}

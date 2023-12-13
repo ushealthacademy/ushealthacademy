@@ -1,0 +1,17 @@
+.whatsapp_btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 30px;
+  background-color: white;
+  height: 50px;
+  width: 50px;
+  @include flecCenter;
+  background-color: #25d366;
+
+  border-radius: 50%;
+  svg {
+    color: white;
+    // margin-bottom: 8px;
+  }
+}
