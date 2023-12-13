@@ -42,7 +42,7 @@ const NodHeader = (props) => {
             <div>
               <div className={styles.left}>
                 <Link href='#resgister'>
-                Register With Us <ArrowRight/>
+                Register With Us
                 </Link>
               </div>
 
